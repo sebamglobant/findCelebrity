@@ -25,9 +25,9 @@ public class Team {
     }
 
     /**
-     * Functions that return the celebrity in the team
+     * Functions that return the celebrity ID in the team, if there isn't a celebrity returns -1
      * */
-    public void findCelebrity() {
+    public int findCelebrity() {
 
         Stack<Integer> members = new Stack<>();
         /**
@@ -55,6 +55,19 @@ public class Team {
                 members.push(a);
             }
         }
+
+        int celebrityId = members.pop();
+
+        /**
+         * Now check if the last id in the stack is the celebrity
+         * */
+        for (int i = 0; i < this.n; i++) {
+            if (i != celebrityId && (this.knows(celebrityId, i) || !this.knows(i,celebrityId))) {
+                return -1;
+            }
+        }
+
+        return celebrityId;
     }
 
     /**
