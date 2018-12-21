@@ -7,11 +7,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class FileReader {
 
     private final String resourcesPath = "./src/main/resources/";
     private String currentLine;
+    private static final Logger log = Logger.getLogger("AppLogger");
 
     /***
      * This function read the testCases.txt file and return a list of teams with
@@ -26,11 +28,11 @@ public class FileReader {
 
         int numCases = sc.nextInt();
         sc.nextLine();
-        System.out.println("Test Cases to load: " + numCases);
+        log.info("Test Cases to load: " + numCases);
 
         int contCases = 1;
         while(contCases <= numCases) {
-            System.out.println(" Loading test case " + contCases);
+            log.info(" Loading test case " + contCases);
 
             teams.add(this.generateTeamMatrix(sc));
             contCases++;
@@ -45,7 +47,7 @@ public class FileReader {
     private Team generateTeamMatrix(Scanner sc) {
 
         int teamMembers = Integer.parseInt(sc.nextLine());
-        System.out.println("  People in this team: " + teamMembers);
+        log.info("  People in this team: " + teamMembers);
         Team team = new Team(teamMembers);
 
         int contMembers = 0;
@@ -58,7 +60,7 @@ public class FileReader {
             contMembers++;
         }
 
-        System.out.println("  Team matrix loaded");
+        log.info("  Team matrix loaded");
         return team;
     }
 }
