@@ -2,7 +2,7 @@
 This project is a solution with Stack to solve the code problem **Find the celebrity**.
 
 ## Problem
-#####Description:
+**Description:**
 * In a team of *n* people, a celebrity is known by everyone but he/she doesn't know anybody.
 
 ## Solution
@@ -47,12 +47,12 @@ We must to repeat this validations untils only remains one id in the Stack.
 After those validations and we have only one ID, we have to validate this ID in the matrix and verify if is the celebrity.
     
 ## How to make it work
-This project is a JAVA solution and is build with gradle, so if you want to run it you can execute the following command in the root of the project.
+This project is a JAVA solution and is build with gradle. So if you want to run it, you can execute the following command at the root project's folder.
 
     ./gradlew run
     
 ## testCases.txt file
-If you want to add some extra cases you can add it in the testCases.txt file, following this convention of the file:
+If you want to add some extra cases, you can add it in the testCases.txt file following this convention of the file:
 
 ````
 3 /* Number of test cases in this file*/
