@@ -24,6 +24,14 @@ public class Team {
         this.teamMatrix = teamMatrix;
     }
 
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
     /**
      * Functions that return the celebrity ID in the team, if there isn't a celebrity returns -1
      * */
@@ -74,7 +82,7 @@ public class Team {
      * Functions that takes 2 members ids (a and b), and return true if a knows b,
      * false if a doesn't knows b
      * */
-    private boolean knows(int a, int b) {
+    public boolean knows(int a, int b) {
         return (this.teamMatrix[a][b] == 1) ? true : false;
     }
 

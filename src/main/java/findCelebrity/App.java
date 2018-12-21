@@ -2,7 +2,6 @@ package findCelebrity;
 
 import findCelebrity.model.Team;
 import findCelebrity.reader.FileReader;
-import findCelebrity.util.AppLogger;
 
 import java.util.List;
 import java.util.logging.Logger;

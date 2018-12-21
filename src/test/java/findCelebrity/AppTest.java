@@ -3,6 +3,7 @@
  */
 package findCelebrity;
 
+import findCelebrity.model.Team;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -10,5 +11,34 @@ public class AppTest {
     @Test public void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Test public void testKnowsFunction() {
+        Team team = new Team(4);
+        int MATRIX[][] = {
+            { 0, 0, 1, 0 },
+            { 0, 0, 1, 0 },
+            { 0, 0, 0, 0 },
+            { 0, 0, 1, 0 }
+        };
+        team.setTeamMatrix(MATRIX);
+        assertEquals(true, team.knows(0,2));
+        assertEquals(false, team.knows(0,1));
+    }
+
+    @Test public void testFindCelebrityFunction() {
+        Team team = new Team(4);
+        int MATRIX[][] = {
+            { 0, 0, 1, 0 },
+            { 0, 0, 1, 0 },
+            { 0, 0, 0, 0 },
+            { 0, 0, 1, 0 }
+        };
+        team.setTeamMatrix(MATRIX);
+        assertEquals(2, team.findCelebrity());
+
+        MATRIX[2][1]=1;
+        team.setTeamMatrix(MATRIX);
+        assertEquals(-1, team.findCelebrity());
     }
 }
