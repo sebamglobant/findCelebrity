@@ -1,5 +1,5 @@
 # Find the celebrity
-This project is a solution with Stack to solve the code problem **Find the celebrity**.
+This project is a JAVA solution using Stacks to solve the code problem **Find the celebrity**.
 
 ## Problem
 **Description:**
@@ -52,7 +52,7 @@ This project is a JAVA solution and is build with gradle. So if you want to run 
     ./gradlew run
     
 ## testCases.txt file
-If you want to add some extra cases, you can add it in the testCases.txt file following this convention of the file:
+If you want to add some extra cases, you can add it in the testCases.txt file following this conventions:
 
 ````
 3 /* Number of test cases in this file*/
